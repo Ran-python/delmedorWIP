@@ -4,10 +4,10 @@ import app
 from app.LibModels import db, Book, LoanType, Customer, Loan, MyLoan, BookAvailability, User
 from app.logger import log_info, log_error, log_warning, log_debug
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from app.businesslayer import app as business_app
+# from app.businesslayer import app as business_app
 
 app = (flask)
-BusinessLayer = business_app
+# BusinessLayer = business_app
 
 
 # Initialize Blueprint for API routes
@@ -102,8 +102,8 @@ def handle_books():
             log_info(f"Received book creation request: {book_data}")
 
             # Forward the data to BusinessLayer for processing
-            response, status_code = BusinessLayer.add_book(book_data)
-            return jsonify(response), status_code
+            #response, status_code = BusinessLayer.add_book(book_data)
+            #return jsonify(response), status_code
 
         elif request.method == 'GET':
             # Return a message for GET requests

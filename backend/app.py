@@ -5,7 +5,7 @@ from config.config import Config
 from app.logger import log_info, log_error, log_warning, log_debug
 from flask_jwt_extended import JWTManager
 from app.auth import auth_bp, init_auth  # Import auth blueprint and initialization
-from app.businesslayer import app as business_app
+# from app.businesslayer import app as business_app
 from flask_cors import CORS  # Optional for cross-origin requests
 
 # Define Flask app 
